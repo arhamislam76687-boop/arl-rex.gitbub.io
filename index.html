@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ARL rex | Personal Portfolio</title>
+  <meta name="description" content="Welcome to ARL rex's personal portfolio. Discover my identity, education, skills and projects.">
+  <meta name="keywords" content="ARL rex, personal portfolio, student portfolio">
+  <meta name="author" content="ARL rex">
+  <meta name="theme-color" content="#090909">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #090909;
+      color: #f5f5f5;
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    :root {
+      --gold: #d6b46a;
+      --muted: #a5a5a5;
+      --panel: #141414;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(9,9,9,.95);
+      border-bottom: 1px solid #292929;
+      padding: 18px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      min-height: 85vh;
+      padding: 90px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+    }
+
+    .hero-text {
+      max-width: 650px;
+    }
+
+    .tag {
+      color: var(--gold);
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.15;
+      margin: 20px 0;
+    }
+
+    h1 span {
+      color: var(--gold);
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 520px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 25px;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      transition: .3s;
+    }
+
+    .btn:hover {
+      background: var(--gold);
+      color: #090909;
+    }
+
+    .photo {
+      width: 270px;
+      height: 330px;
+      flex-shrink: 0;
+      border: 1px solid var(--gold);
+      background: #171717;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--gold);
+      letter-spacing: 2px;
+      padding: 20px;
+    }
+
+    section {
+      padding: 85px 8%;
+      border-top: 1px solid #222;
+    }
+
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .section-title span {
+      color: var(--gold);
+    }
+
+    .about-text {
+      max-width: 750px;
+      color: var(--muted);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid #292929;
+      padding: 28px;
+      transition: .3s;
+    }
+
+    .card:hover {
+      border-color: var(--gold);
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact-box {
+      background: var(--panel);
+      border: 1px solid #333;
+      padding: 30px;
+      max-width: 650px;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      margin: 10px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #888;
+      border-top: 1px solid #222;
+      font-size: 13px;
+    }
+
+    footer span {
+      color: var(--gold);
+    }
+
+    @media(max-width: 700px) {
+      header {
+        padding: 15px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      nav {
+        width: 100%;
+        justify-content: space-between;
+        gap: 8px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 75px 7%;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+      }
+
+      .photo {
+        width: 210px;
+        height: 240px;
+        align-self: center;
+      }
+
+      section {
+        padding: 65px 7%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="#" class="logo">ARL <span>rex.</span></a>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <div class="hero" id="home">
+    <div class="hero-text">
+      <div class="tag">WELCOME TO MY WORLD</div>
+
+      <h1>I'm <span>ARL rex</span></h1>
+
+      <p>
+        A student, a learner and an ambitious individual.
+        Exploring knowledge, developing skills and building
+        my own journey towards the future.
+      </p>
+
+      <a href="#about" class="btn">DISCOVER MORE ↗</a>
+    </div>
+
+    <div class="photo">
+      YOUR PERSONAL<br>PHOTO HERE
+    </div>
+  </div>
+
+  <section id="about">
+    <h2 class="section-title">About <span>Me</span></h2>
+
+    <p class="about-text">
+      Hello! I'm ARL rex. I believe in learning, self-development
+      and creating opportunities through knowledge and hard work.
+      This website is my personal space to introduce myself,
+      showcase my interests and share my journey.
+    </p>
+  </section>
+
+  <section id="education">
+    <h2 class="section-title">My <span>Education</span></h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>HSC Student</h3>
+        <p>Science Group</p>
+        <p>Currently continuing my higher secondary education.</p>
+      </div>
+
+      <div class="card">
+        <h3>Future Goals</h3>
+        <p>Higher Education</p>
+        <p>Focused on building knowledge and preparing for future opportunities.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title">My <span>Interests</span></h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Communication</h3>
+        <p>Interested in communication and expressing ideas.</p>
+      </div>
+
+      <div class="card">
+        <h3>Technology</h3>
+        <p>Exploring digital tools and modern technology.</p>
+      </div>
+
+      <div class="card">
+        <h3>Learning</h3>
+        <p>Always interested in learning something new.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Get In <span>Touch</span></h2>
+
+    <div class="contact-box">
+      <h3>Let's Connect</h3>
+      <p>Thank you for visiting my personal portfolio.</p>
+      <p>For communication, you can connect with me through my social profiles.</p>
+      <a href="https://github.com/arhamislam76687-boop"
+         class="btn" target="_blank" rel="noopener">
+        MY GITHUB ↗
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 <span>ARL rex</span>. All Rights Reserved.
+  <br>Designed with passion.
+</footer>
+
+</body>
+</html>
